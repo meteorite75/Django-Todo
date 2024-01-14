@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>First Page</h1>
+    <h1>To Do</h1>
+
+    {% for task in tasks %}
+        <div>
+            <h3>{{task}}</h3>
+        </div>
+    {% endfor %}
+
 </body>
 </html>

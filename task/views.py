@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from .models import *
 
 def index(request):
-    return render(request, 'task/list.html')
+    tasks = Task.objects.all()
+    
+    context = {'tasks': tasks}
+    return render(request, 'task/list.html', context)
