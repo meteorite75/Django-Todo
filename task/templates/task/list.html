@@ -16,6 +16,7 @@
 
     {% for task in tasks %}
         <div>
+            <a href="{% url 'udpate_task' task.id %}">Update</a>
             <h3>{{task}}</h3>
         </div>
     {% endfor %}
